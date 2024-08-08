@@ -267,12 +267,13 @@ nav .toggle-btn {
   position: relative;
 }
 
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 4rem 20rem;
 }
 
 .header {
@@ -357,6 +358,7 @@ nav .toggle-btn {
   bottom: 0;
   right: 0;
 }
+
 
 /* **************** Our Work **************** */
 

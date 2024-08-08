@@ -214,7 +214,7 @@ nav .toggle-btn {
 .animated-button {
   position: relative;
   display: inline-block;
-  padding: 16px 16px;
+  padding: 0.833vw 0.833vw;
   width: 10vw; /* Set width using vw */
   border: none;
   background-color: var(--button-color);
@@ -272,7 +272,7 @@ nav .toggle-btn {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 4rem 18rem;
+  margin: 4rem 8rem;
 }
 
 .header {
@@ -315,8 +315,8 @@ nav .toggle-btn {
 }
 
 .about-img img {
-  max-width: 600px;
-  height: 26.042vw;
+  max-width: 100%;
+  min-width: 500px;
   z-index: 1;
 }
 
@@ -325,7 +325,7 @@ nav .toggle-btn {
 }
 
 .about-info .description h3 {
-  margin-top: 10px;
+  margin-top: 1px;
   font-size: 2.5em;
   font-weight: 600;
 }
@@ -602,8 +602,6 @@ button:hover .button-text {
   }
 } */
 
-
-
 /* Services section */
 
 .Services {
@@ -618,6 +616,7 @@ button:hover .button-text {
 .Services h3 {
   position: absolute;
   top: 20vh;
+  left: 300px;
   font-size: 26px;
   align-self: flex-start;
 }
@@ -699,7 +698,6 @@ button:hover .button-text {
   z-index: -1;
   right: 0;
 }
-
 
 /* Mission & Vision */
 
@@ -1049,7 +1047,32 @@ footer .end {
   color: #fff;
 }
 
-@media (max-width: 990px) {
+@media screen and (max-width: 1360px) {
+  .animated-button {
+    /* padding: 14px 14px; */
+    width: 14vw;
+  }
+
+  .about-info .description h3 {
+    margin-top: 1px;
+    font-size: 2em;
+    font-weight: 600;
+  }
+
+  .description h4 {
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 1px;
+  }
+
+  .description p {
+    color: var(--first-color);
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1090px) {
   nav .nav-item,
   nav .round,
   nav #contactusbtn {
@@ -1068,11 +1091,58 @@ footer .end {
   }
 
   .home h1 {
+    font-size: 42px;
+    text-align: center;
+  }
+
+  .animated-button {
+    /* padding: 10px 10px; */
+    width: 14vw;
+    font-size: 14px;
+  }
+
+  .about-img img {
+    min-width: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .about-info {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 1010px) {
+  .about-info .description h3 {
+    margin-top: 1px;
+    font-size: 1.6em;
+    font-weight: 600;
+  }
+  .description h4 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 1px;
+  }
+  .description p {
+    color: var(--first-color);
+    font-size: 10px;
+  }
+
+  .aboutbg-img {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .home h1 {
     font-size: 40px;
   }
 
   .animated-button {
-    width: 15vw;
+    width: 16vw;
+    font-size: 10px;
   }
 
   .content {
@@ -1264,6 +1334,17 @@ footer .end {
     left: 8%;
   }
 
+  .header h1 {
+    -webkit-background-clip: text;
+    font-size: 54px;
+    text-align: center;
+  }
+
+  .header h2 {
+    width: fit-content;
+    font-size: 34px;
+    text-align: center;
+  }
   .home {
     padding: 1px;
     background: url("../Images/Background-vertical.jpg") no-repeat center;
@@ -1284,9 +1365,17 @@ footer .end {
   }
 
   .animated-button {
-    width: 40vw;
+    width: 30vw;
+    height: 3.5vh;
   }
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 4rem;
+  }
   .content {
     display: flex;
     flex-direction: column;
@@ -1297,19 +1386,19 @@ footer .end {
   }
 
   .about-info .description h3 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
     margin: 0;
     padding: 0;
   }
 
   .description h4 {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
   }
 
   .description p {
-    font-size: 16px;
+    font-size: 10px;
   }
 
   .aboutbg-img {

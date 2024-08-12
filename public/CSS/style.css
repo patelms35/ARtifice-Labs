@@ -288,6 +288,7 @@ nav .toggle-btn {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0.1;
+  text-align: center;
 }
 
 .header h2 {
@@ -296,6 +297,8 @@ nav .toggle-btn {
   font-weight: 700;
   transform: translateY(-80px) translateX(50px);
   margin-bottom: 0;
+  text-align: center;
+
 }
 
 .header h2:before {
@@ -306,6 +309,7 @@ nav .toggle-btn {
   right: 0;
   bottom: 0;
   background: var(--second-color);
+  text-align: center;
 }
 
 .content {
@@ -371,6 +375,7 @@ nav .toggle-btn {
 .our-work {
   position: relative;
   z-index: 0;
+  height: 100vh;
 }
 
 .blue-circle {
@@ -525,8 +530,8 @@ button {
 button.learn-more {
   width: 15rem;
   height: auto;
-  margin-top: 18.229vw;
-  margin-left: 900px;
+  margin-left: 880px;
+  bottom: 350px;
 }
 
 button.learn-more .circle {
@@ -606,32 +611,31 @@ button:hover .button-text {
 
 /* Services section */
 
-.Services {
+.Service {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.image {
+  align-self: stretch;
+  width: 3.75rem;
   position: relative;
-  padding: 0;
+  border-radius: 8px;
+  background-color: #dedede;
 }
-
-.Services .header {
-  margin-bottom: 40px;
+.image-wrapper {
+  align-self: stretch;
+  height: 3.75rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 1.312rem 0 1.25rem;
+  box-sizing: border-box;
 }
-
-.Services h3 {
-  position: absolute;
-  top: 20vh;
-  left: 300px;
-  font-size: 26px;
-  align-self: flex-start;
-}
-
-.Services .card {
-  border-radius: 12px;
-  margin-top: 100px;
-}
-
-.Services .card:hover {
-  box-shadow: 0 4px 18px rgba(16, 110, 234, 0.6);
-}
-
 .iclass {
   background-color: #dedede;
   color: black;
@@ -641,64 +645,141 @@ button:hover .button-text {
   border-radius: 8px;
 }
 
-.Services .card:hover .iclass {
+.Service :hover .iclass {
   color: #106eea;
 }
 
-.Services p {
-  padding: 0 1vw;
-}
-
-.Services .btn {
-  border-radius: 58px;
-  background-color: #3c3c43;
-  vertical-align: middle;
-  padding: 7px;
-  padding-left: 2.7vw;
-  color: white;
-  font-weight: 400;
-  text-align: center;
+.web-development {
+  margin: 0;
+  flex: 1;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: inherit;
+  font-weight: 600;
+  font-family: inherit;
 }
-.Services .card:hover .btn {
-  background-color: #106eea;
+.web-development-wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 3.812rem;
+}
+.lorem-ipsum-dolor {
+  align-self: stretch;
+  position: relative;
+  font-size: 1rem;
+}
+.frame-parent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0.25rem;
+  gap: 1.875rem;
+}
+.tag-child {
+  height: 1.75rem;
+  width: 1.75rem;
+  position: relative;
+}
+
+.learn-more {
+  text-decoration: none;
+  position: relative;
+  font-size: 0.875rem;
+  font-family: Poppins;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+  min-width: 5rem;
+  white-space: nowrap;
+}
+.learn-more-wrapper,
+.tag {
+  justify-content: flex-start;
+}
+.learn-more-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.218rem 0 0;
+}
+.tag {
   cursor: pointer;
+  border: 1px solid #3c3c43;
+  padding: 0.125rem 0.25rem;
+  background-color: #3c3c43;
+  width: 8.75rem;
+  border-radius: 58px;
+  box-sizing: border-box;
+  flex-direction: row;
+  gap: 0.625rem;
 }
-.Services .btn .round {
-  height: 2rem;
-  width: 2rem;
-  border-radius: 50%;
-  background-color: #fff;
-  color: #000;
-  left: 3px;
+
+.tag:hover{
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+}
+
+.root,
+.service,
+.tag,
+.tag-wrapper {
   display: flex;
+  align-items: flex-start;
+}
+.tag-wrapper {
+  align-self: stretch;
+  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  position: absolute;
+  padding: 0 1.312rem 0 1.25rem;
 }
-.Services .card:hover .btn .round {
-  color: #106eea;
+.root,
+.service {
+  max-width: 100%;
+  justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
+}
+.service {
+  flex: 1;
+  box-shadow: 21px 15px 7px transparent, 14px 9px 7px rgba(0, 0, 0, 0.01),
+    8px 5px 6px rgba(0, 0, 0, 0.05), 3px 2px 4px rgba(0, 0, 0, 0.09),
+    1px 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  background-color: #fff;
+  border: 2px solid rgba(224, 224, 224, 0.4);
+  box-sizing: border-box;
+  overflow: hidden;
+  flex-direction: column;
+  padding: 2rem 1rem;
+  gap: 1.875rem;
+  min-width: 17.125rem;
+  z-index: 1;
+  transition: 0.4s ;
+  padding-bottom: 4rem;
 }
 
-.Services .btn span {
-  padding-right: 5px;
-}
-.Services .right {
-  right: 8em;
-}
-
-.Services .left {
-  left: -10em;
+.service:hover{
+  box-shadow: rgba(16, 110, 234, .25) 0px 13px 27px -5px, rgba(16, 110, 234, 0.3) 0px 8px 16px -8px;
+  border: 2px solid rgba(16, 110, 234, 0.3);
+  transition: 0.4s ;
+  
 }
 
-.servicesbg-img {
-  position: absolute;
-  bottom: 100px;
-  z-index: -1;
-  right: 0;
+.root {
+  width: 74.688rem;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3.125rem;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #000;
+  font-family: Poppins;
 }
 
 /* Mission & Vision */
@@ -908,7 +989,7 @@ button:hover .button-text {
 
 /* footer section */
 
-ul{
+ul {
   list-style: none;
 }
 
@@ -1038,14 +1119,12 @@ footer .end h3 {
   color: #fff;
 }
 
-
 .wrapper .instagram:hover,
 .wrapper .instagram:hover .tooltip,
 .wrapper .instagram:hover .tooltip::before {
   background: #e4405f;
   color: #fff;
 }
-
 
 @media screen and (max-width: 1360px) {
   .animated-button {
@@ -1078,6 +1157,10 @@ footer .end h3 {
   .cards {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .Service{
+    margin: 2rem;
   }
 }
 
@@ -1423,6 +1506,7 @@ footer .end h3 {
 
   .our-work {
     margin-top: 80px;
+    height: 100vh;
   }
 
   .cards {
@@ -1469,10 +1553,12 @@ footer .end h3 {
     margin-top: 80px;
   }
 
-  .Services {
+  .Service {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* height: 100vh; */
+    margin: 2rem;
   }
 
   .iclass {
